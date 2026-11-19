@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 46, "column": 0}, "map": {"version":3,"sources":["file:///Users/bartek/Desktop/qnsay0.github.io/components/SmoothScroll.tsx"],"sourcesContent":["\"use client\";\n\nimport Lenis from \"lenis\";\nimport { useEffect } from \"react\";\n\nconst SmoothScroll = () => {\n  useEffect(() => {\n    if (window.matchMedia(\"(pointer: coarse)\").matches) return;\n\n    const lenis = new Lenis({ anchors: true });\n    let frame = 0;\n\n    const raf = (time: number) => {\n      lenis.raf(time);\n      frame = requestAnimationFrame(raf);\n    };\n\n    frame = requestAnimationFrame(raf);\n\n    return () => {\n      cancelAnimationFrame(frame);\n      lenis.destroy();\n    };\n  }, []);\n\n  return null;\n};\n\nexport default SmoothScroll;\n"],"names":["SmoothScroll","window","matchMedia","matches","lenis","anchors","frame","raf","time","requestAnimationFrame","cancelAnimationFrame","destroy"],"mappings":";;;;AAEA;AACA;AAHA;;;AAKA,MAAMA,eAAe;IACnB,IAAA,kNAAS,EAAC;QACR,IAAIC,OAAOC,UAAU,CAAC,qBAAqBC,OAAO,EAAE;QAEpD,MAAMC,QAAQ,IAAI,kJAAK,CAAC;YAAEC,SAAS;QAAK;QACxC,IAAIC,QAAQ;QAEZ,MAAMC,MAAM,CAACC;YACXJ,MAAMG,GAAG,CAACC;YACVF,QAAQG,sBAAsBF;QAChC;QAEAD,QAAQG,sBAAsBF;QAE9B,OAAO;YACLG,qBAAqBJ;YACrBF,MAAMO,OAAO;QACf;IACF,GAAG,EAAE;IAEL,OAAO;AACT;uCAEeX"}}]
-}

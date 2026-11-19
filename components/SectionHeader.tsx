@@ -1,5 +1,11 @@
 import { Separator } from "./ui/separator";
-const SectionHeader = (props) => {
+type SectionHeaderProps = {
+  id?: string;
+  sectionName: string;
+  index: string;
+};
+
+const SectionHeader = (props: SectionHeaderProps) => {
   return (
     <div id={props.id}>
       <header className="flex flex-row justify-between mb-5 mt-10  text-muted-foreground">
