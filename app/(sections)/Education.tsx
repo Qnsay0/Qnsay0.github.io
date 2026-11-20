@@ -158,6 +158,7 @@ const Record = ({ span, hrefString, title, date, text }: RecordType) => {
           <p className="leading-none">{hrefString}</p>
         </div>
       </div>
+
       <div className="max-w-xl">
         <h1 className="text-blue-200 truncate">{title}</h1>
         <p className="text-xs text-white line-clamp-2">

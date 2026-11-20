@@ -3,7 +3,19 @@
 @import "shadcn/tailwind.css";
 
 @custom-variant dark (&:is(.dark *));
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
 
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+  }
+}
 @theme {
   --font-firjar: "Firjar", sans-serif;
   --color-ink: #111111;

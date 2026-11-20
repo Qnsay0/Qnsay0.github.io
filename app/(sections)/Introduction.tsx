@@ -20,7 +20,7 @@ const Introduction = () => (
 
 const AnimatedText = ({ text }: { text: string }) => {
   const ref = useRef<HTMLHeadingElement>(null);
-  const { scrollYProgress } = useScroll({ target: ref, offset: ["start 0.8", "end 0.5"] });
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["start 0.6", "end 0.5"] });
   const words = text.split(" ");
 
   return (
