@@ -15,8 +15,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={cn("font-firjar", "font-sans", geist.variable, anton.variable)}>
-      <body>
+    <html lang="en" className={cn("font-firjar", "font-sans ", geist.variable, anton.variable)}>
+      <body className="bg-ink">
         <SmoothScroll />
         {children}
       </body>
